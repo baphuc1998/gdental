@@ -1,0 +1,33 @@
+<p>schedule works!</p>
+<div *ngIf="StartComponent;else NotYet">
+    <!-- <kendo-scheduler [editable]="true" [events]="events" [selectedDate]="selectedDate" style="height: 600px;">
+        <kendo-scheduler-week-view startTime="07:00">
+        </kendo-scheduler-week-view>
+    </kendo-scheduler> -->
+
+    <!-- <kendo-scheduler [editable]="false" [kendoSchedulerBinding]="events" [kendoSchedulerReactiveEditing]="createFormGroup"
+        [selectedDate]="selectedDate" style="height: 600px;">
+        <kendo-scheduler-week-view startTime="07:00">
+        </kendo-scheduler-week-view>
+    </kendo-scheduler> -->
+
+    <kendo-scheduler [kendoSchedulerBinding]="events" [selectedDate]="selectedDate"
+                         startTime="07:00" endTime="19:00"
+                         style="height: 600px;">
+            <kendo-scheduler-day-view>
+            </kendo-scheduler-day-view>
+
+            <kendo-scheduler-multi-day-view [numberOfDays]="3">
+            </kendo-scheduler-multi-day-view>
+
+            <kendo-scheduler-week-view>
+            </kendo-scheduler-week-view>
+
+            <kendo-scheduler-work-week-view>
+            </kendo-scheduler-work-week-view>
+        </kendo-scheduler>
+
+</div>
+<ng-template #NotYet>
+    Chưa có gì
+</ng-template>
