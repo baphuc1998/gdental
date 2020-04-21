@@ -21,11 +21,11 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.initFacebookService();
+    // this.initFacebookService();
   }
 
   private initFacebookService(): void {
-    const initParams: InitParams = { xfbml: true, version: 'v3.2' };
+    const initParams: InitParams = { xfbml: true, version: 'v3.2', appId : '311488643162598' };
     this.facebookService.init(initParams);
   }
 
