@@ -18,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SchedulerModule } from '@progress/kendo-angular-scheduler';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { jqxBarGaugeModule }    from 'jqwidgets-ng/jqxbargauge';
-import{ jqxSchedulerComponent } from 'jqwidgets-ng/jqxscheduler';  
+import{ jqxSchedulerComponent } from 'jqwidgets-ng/jqxscheduler';
+import { FacebookModule } from 'ngx-facebook';  
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import{ jqxSchedulerComponent } from 'jqwidgets-ng/jqxscheduler';
     FormsModule,
     ReactiveFormsModule,
     jqxBarGaugeModule,
+    FacebookModule.forRoot(),
     RouterModule.forRoot(routes),
   ],
   providers: [],

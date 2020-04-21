@@ -35,6 +35,7 @@
     "@progress/kendo-recurrence": "^1.0.0",
     "@progress/kendo-theme-default": "^4.14.0",
     "jqwidgets-ng": "^9.0.0",
+    "ngx-facebook": "^2.4.0",
     "rxjs": "~6.4.0",
     "sweetalert2": "^9.8.2",
     "tslib": "^1.10.0",

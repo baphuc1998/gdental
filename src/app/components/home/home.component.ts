@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { CustomerService } from './../../services/customer.service';
 import Swal from 'sweetalert2';
+import { FacebookService, InitParams } from 'ngx-facebook';
 
 @Component({
   selector: 'app-home',
@@ -15,10 +16,17 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(
     public customerService: CustomerService,
+    private facebookService: FacebookService
   ) { }
 
   ngOnInit() {
+    this.initFacebookService();
   }
+
+  private initFacebookService(): void {
+    const initParams: InitParams = { xfbml: true, version: 'v3.2' };
+    this.facebookService.init(initParams);
+}
 
   ngOnDestroy() {
     if (this.subscription) {
