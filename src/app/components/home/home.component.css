@@ -1,4 +1,9 @@
-.lead{
+.lead {
     font-size: 1.25rem;
     font-weight: 300;
+}
+
+.cls-size {
+    width: 200px;
+    height: 200px;
 }

@@ -17,7 +17,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     public customerService: CustomerService,
     private facebookService: FacebookService
-  ) { }
+  ) { 
+  }
 
   ngOnInit() {
     this.initFacebookService();
@@ -26,7 +27,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   private initFacebookService(): void {
     const initParams: InitParams = { xfbml: true, version: 'v3.2' };
     this.facebookService.init(initParams);
-}
+  }
 
   ngOnDestroy() {
     if (this.subscription) {
@@ -64,7 +65,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
-  public listFreeTime : any[] = ['8:00','9:00','10:00','11:00','13:00','14:00','15:00','16:00'];
+  public listFreeTime: any[] = ['8:00', '9:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00'];
 
   onFileSelected(files: FileList) {
     if (files.length > 0) {
@@ -72,12 +73,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
-  onPickDate(date){
+  onPickDate(date) {
     console.log(date);
-    this.subscription = this.customerService.getFreeTimeList(date).subscribe(data =>{
+    this.subscription = this.customerService.getFreeTimeList(date).subscribe(data => {
       // const data2 = String(data);
       this.listFreeTime = data;
-    },error =>{
+    }, error => {
       console.log(error);
     });
   }
