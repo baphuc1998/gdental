@@ -33,6 +33,30 @@
 <link rel="stylesheet" href="styles.c999b51fa351aff5b9ff.css"></head>
 
 <body>
+    <h1>INDEX NE</h1>
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v6.0'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="110366170637769">
+        Hello
+    </div>
     <app-root></app-root>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -47,7 +71,9 @@
 
     <!--Facebook SDK-->
     <script type="text/javascript" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script type=”text/javascript” src=”https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js "></script>
 
-<script src="runtime-es2015.edb2fcf2778e7bf1d426.js" type="module"></script><script src="runtime-es5.edb2fcf2778e7bf1d426.js" nomodule defer></script><script src="polyfills-es5.6696c533341b95a3d617.js" nomodule defer></script><script src="polyfills-es2015.2987770fde9daa1d8a2e.js" type="module"></script><script src="main-es2015.73ec3758e1f663a2ab34.js" type="module"></script><script src="main-es5.73ec3758e1f663a2ab34.js" nomodule defer></script></body>
+
+<script src="runtime-es2015.edb2fcf2778e7bf1d426.js" type="module"></script><script src="runtime-es5.edb2fcf2778e7bf1d426.js" nomodule defer></script><script src="polyfills-es5.6696c533341b95a3d617.js" nomodule defer></script><script src="polyfills-es2015.2987770fde9daa1d8a2e.js" type="module"></script><script src="main-es2015.1fb163acbba091ec86f1.js" type="module"></script><script src="main-es5.1fb163acbba091ec86f1.js" nomodule defer></script></body>
 
 </html>
