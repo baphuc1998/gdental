@@ -28,7 +28,7 @@ import{ jqxSchedulerComponent } from 'jqwidgets-ng/jqxscheduler';
     ServiceComponent,
     GalleryComponent,
     ScheduleComponent,
-    jqxSchedulerComponent
+    // jqxSchedulerComponent
   ],
   imports: [
     BrowserModule,
