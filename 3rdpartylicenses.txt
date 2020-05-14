@@ -71,6 +71,9 @@ All available Kendo UI commercial licenses may be obtained at http://www.telerik
 *Copyright © 2020 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.*
 
 
+@progress/kendo-angular-conversational-ui
+SEE LICENSE IN LICENSE.md
+
 @progress/kendo-angular-dateinputs
 SEE LICENSE IN LICENSE.md
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>GDental</title>
+    <title>G-Dental Clinic</title>
     <base href="https://baphuc1998.github.io/gdental/">    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -29,6 +29,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Import for template -->
+
+    <link href="assets/dist/ekko-lightbox.css" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.c999b51fa351aff5b9ff.css"></head>
 
@@ -69,9 +71,16 @@
 
     <!--Facebook SDK-->
     <script type="text/javascript" src="https://connect.facebook.net/en_US/sdk.js"></script>
-    <script type=”text/javascript” src=”https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js "></script>
+    <script type=”text/javascript” src="https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js"></script>
 
+    <script src="assets/dist/ekko-lightbox.js"></script>
+    <script type="text/javascript">
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    </script>
 
-<script src="runtime-es2015.edb2fcf2778e7bf1d426.js" type="module"></script><script src="runtime-es5.edb2fcf2778e7bf1d426.js" nomodule defer></script><script src="polyfills-es5.6696c533341b95a3d617.js" nomodule defer></script><script src="polyfills-es2015.2987770fde9daa1d8a2e.js" type="module"></script><script src="main-es2015.7afb011d6cb89a841331.js" type="module"></script><script src="main-es5.7afb011d6cb89a841331.js" nomodule defer></script></body>
+<script src="runtime-es2015.edb2fcf2778e7bf1d426.js" type="module"></script><script src="runtime-es5.edb2fcf2778e7bf1d426.js" nomodule defer></script><script src="polyfills-es5.6696c533341b95a3d617.js" nomodule defer></script><script src="polyfills-es2015.2987770fde9daa1d8a2e.js" type="module"></script><script src="main-es2015.a1492ab86dc733c38eaa.js" type="module"></script><script src="main-es5.a1492ab86dc733c38eaa.js" nomodule defer></script></body>
 
 </html>
