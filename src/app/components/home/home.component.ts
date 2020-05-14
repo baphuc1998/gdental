@@ -49,6 +49,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     formData.append('time', time);
     formData.append('message', message);
 
+    // Swal.fire({
+    //   title: 'Success',
+    //   text: 'Đặt lịch thành công. Nhân viên tư vấn sẽ liên hệ với bạn sớm nhất có thể',
+    //   icon: 'success',
+    // });
     this.subscription = this.customerService.registerSchedule(formData).subscribe(res => {
       Swal.fire({
         title: 'Success',
@@ -65,7 +70,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
-  public listFreeTime: any[] = ['8:00', '9:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00'];
+  public listFreeTime: any[] = ['8:00', '9:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00','17:00','18:00'];
 
   onFileSelected(files: FileList) {
     if (files.length > 0) {

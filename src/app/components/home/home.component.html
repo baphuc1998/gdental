@@ -1,64 +1,3 @@
-<!-- top header -->
-<div class="header-top">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <ul class="d-lg-flex header-w3_pvt">
-                    <li class="mr-lg-3">
-                        <!-- <div class="fb-customerchat" page_id="110366170637769"></div> -->
-                        <span class="fa fa-envelope-open"></span>
-                        <a href="mailto:info@example.com" class="">gladental@gmail.com</a>
-                    </li>
-                    <li>
-                        <span class="fa fa-phone"></span>
-                        <p class="d-inline">Call Us +12 345 678</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-6 header-right-w3_pvt">
-                <ul class="d-lg-flex header-w3_pvt justify-content-lg-end">
-                    <li class="mr-lg-3">
-                        <span class=""><span class="fa fa-clock-o"></span>Mon - Fri : 8:30am to 9:30pm</span>
-                    </li>
-                    <li class="">
-                        <span class=""><span class="fa fa-clock-o"></span>Sat & Sun : 9:00am to 6:00pm</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- //top header -->
-
-<!-- //header -->
-<header class="py-3">
-    <div class="container">
-        <div id="logo">
-            <h1> <a href="index.html"><span class="fa fa-stethoscope" aria-hidden="true"></span> Dental Health</a></h1>
-        </div>
-        <!-- nav -->
-        <nav class="d-lg-flex">
-
-            <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
-            <input type="checkbox" id="drop" />
-            <ul class="menu mt-2 ml-auto">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li class=""><a href="about.html">About Us</a></li>
-                <li class=""><a [routerLink]="[ './service' ]">Services</a></li>
-                <li class=""><a [routerLink]="[ './gallery' ]">Gallery</a></li>
-                <li class=""><a [routerLink]="[ './schedule' ]">Schedule</a></li>
-                <li class=""><a [routerLink]="[ './contact' ]">Contact Us</a></li>
-            </ul>
-            <div class="login-icon ml-2">
-                <a class="user" href="contact.html"> Book Now</a>
-            </div>
-        </nav>
-        <div class="clear"></div>
-        <!-- //nav -->
-    </div>
-</header>
-<!-- //header -->
-
 <!-- banner -->
 <div class="banner" id="home">
     <div class="layer">
@@ -132,17 +71,17 @@
 
 <section class="services py-5">
     <div class="container py-lg-5">
-        <h3 class="heading text-center mb-sm-5 mb-4">Book Now</h3>
+        <h3 class="heading text-center mb-sm-5 mb-4">Đặt Ngay</h3>
         <div class="row offer-grids">
 
             <div class="col-lg-6 col-md-6 col-sm-6 pr-5">
                 <!-- <div class="ser1"> -->
                 <div class="">
                     <!-- <div class="bg-layer"> -->
-                    <div class="">
-                        <h4 style="font-size: 3rem;">ONLINE</h4>
-                        <h2 style="font-weight: 900; font-size: 3rem;">APPOINTMENT</h2>
-                        <h3 style="font-size: 3rem;">REQUEST FORM</h3>
+                    <div class="" id="registerForm">
+                        <h4 style="font-size: 3rem;">FORM ĐĂNG KÝ</h4>
+                        <h2 style="font-weight: 900; font-size: 3rem;">LỊCH KHÁM</h2>
+                        <h3 style="font-size: 3rem;">TRỰC TUYẾN</h3>
                         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vitae possimus sapiente temporibus, cum error.</p>
                         <p>Temporibus adipisci modi nisi, in deserunt. Nam, veritatis pariatur fugit explicabo? Nemo eius, eaque saepe facilis quidem nisi. Officiis doloremque dolorum optio.</p>
                     </div>
@@ -211,13 +150,13 @@
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <label class="font-weight-bold" for="note">Tin nhắn</label>
-                                <textarea name="note" id="note" cols="30" rows="5" class="form-control" placeholder="Write your notes or questions here..." #message></textarea>
+                                <textarea name="note" id="note" cols="30" rows="5" class="form-control" placeholder="Nhập ghi chú hoặc câu hỏi của bạn..." #message></textarea>
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <div class="col-md-12">
-                                <input type="submit" value="Send" class="btn btn-primary" (click)="onRegister(name.value,email.value,phone.value,date.value,time.value,message.value)">
+                                <input type="submit" value="Đặt lịch" class="btn btn-primary" (click)="onRegister(name.value,email.value,phone.value,date.value,time.value,message.value)">
                             </div>
                         </div>
                     </div>
@@ -468,79 +407,3 @@
     </div>
 </section>
 <!-- //appointment -->
-
-<!-- footer -->
-<footer class="py-5">
-    <div class="container py-sm-3">
-        <div class="row footer-grids">
-            <div class="col-lg-3 col-sm-6 mb-lg-0 mb-sm-5 mb-4">
-                <h4 class="mb-sm-4 mb-3"><span class="fa fa-stethoscope"></span> Dental Health</h4>
-                <p class="mb-3">Onec Consequat sapien ut cursus rhoncus. Nullam dui mi, vulputate ac metus semper quis luctus sed.</p>
-                <h5>Trusted by <span>500+ People</span> </h5>
-            </div>
-            <div class="col-lg-3 col-sm-6 mb-lg-0 mb-sm-5 mb-4">
-                <h4 class="mb-sm-4 mb-3">Address Info</h4>
-                <p><span class="fa mr-2 fa-map-marker"></span>64d canal street TT 3356 <span>Newyork, NY.</span></p>
-                <p class="phone py-2"><span class="fa mr-2 fa-phone"></span> +1(12) 123 456 789 </p>
-                <p><span class="fa mr-2 fa-envelope"></span><a href="mailto:info@example.com">info@example.com</a></p>
-            </div>
-            <div class="col-lg-2 col-sm-6 mb-sm-0 mb-4">
-                <h4 class="mb-sm-4 mb-3">Quick Links</h4>
-                <ul>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li class="my-2"><a href="#">Support Helpline</a></li>
-                    <li><a href="#">Healthy Tips</a></li>
-                    <li class="mt-2"><a href="#">Privacy Ploicy</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <h4 class="mb-sm-4 mb-3">Subscribe Us</h4>
-                <p class="mb-3">Subscribe to our newsletter</p>
-                <form action="#" method="post" class="d-flex">
-                    <input type="email" id="email" name="EMAIL" placeholder="Enter your email here" required="">
-                    <button type="submit" class="btn">Subscribe</button>
-                </form>
-                <div class="icon-social mt-3">
-                    <a href="#" class="button-footr">
-                        <span class="fa mx-2 fa-facebook"></span>
-                    </a>
-                    <a href="#" class="button-footr">
-                        <span class="fa mx-2 fa-twitter"></span>
-                    </a>
-                    <a href="#" class="button-footr">
-                        <span class="fa mx-2 fa-dribbble"></span>
-                    </a>
-                    <a href="#" class="button-footr">
-                        <span class="fa mx-2 fa-pinterest"></span>
-                    </a>
-                    <a href="#" class="button-footr">
-                        <span class="fa mx-2 fa-google-plus"></span>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- //footer -->
-
-<!-- copyright -->
-<div class="copyright">
-    <div class="container py-4">
-        <div class=" text-center">
-            <p>© 2019 Dental Health. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a> </p>
-        </div>
-    </div>
-</div>
-<!-- //copyright -->
-
-<!-- move top -->
-<div class="move-top text-right">
-    <a href="#home" class="move-top">
-        <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
-    </a>
-</div>
-<!-- move top -->
-
-
-<!-- **************** -->

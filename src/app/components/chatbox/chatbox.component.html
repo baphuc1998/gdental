@@ -1,0 +1,12 @@
+<!-- <kendo-chat [messages]="messages" [user]="user" (sendMessage)="sendMessage($event)">
+    <ng-template kendoChatMessageTemplate let-message>
+        The message text is "{{ message.text }}"
+    </ng-template>
+</kendo-chat> -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <kendo-chat [messages]="feed | async" [user]="user" (sendMessage)="sendMessage($event)" style="width: 100%;"></kendo-chat>
+        </div>
+    </div>
+</div>

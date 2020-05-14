@@ -19,7 +19,13 @@ import { SchedulerModule } from '@progress/kendo-angular-scheduler';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { jqxBarGaugeModule }    from 'jqwidgets-ng/jqxbargauge';
 import{ jqxSchedulerComponent } from 'jqwidgets-ng/jqxscheduler';
-import { FacebookModule } from 'ngx-facebook';  
+import { FacebookModule } from 'ngx-facebook';
+import { ChatModule } from '@progress/kendo-angular-conversational-ui';
+import { ChatboxComponent } from './components/chatbox/chatbox.component';
+import { ServiceCostComponent } from './components/service-cost/service-cost.component';
+import { BaseSiteComponent } from './components/base-site/base-site.component';
+import { FormatLongstringPipe } from './services/pipe/format-longstring.pipe';
+  
 
 @NgModule({
   declarations: [
@@ -29,6 +35,10 @@ import { FacebookModule } from 'ngx-facebook';
     ServiceComponent,
     GalleryComponent,
     ScheduleComponent,
+    ChatboxComponent,
+    ServiceCostComponent,
+    BaseSiteComponent,
+    FormatLongstringPipe,
     // jqxSchedulerComponent
   ],
   imports: [
@@ -40,8 +50,10 @@ import { FacebookModule } from 'ngx-facebook';
     FormsModule,
     ReactiveFormsModule,
     jqxBarGaugeModule,
+    ChatModule,
     FacebookModule.forRoot(),
     RouterModule.forRoot(routes),
+    ChatModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

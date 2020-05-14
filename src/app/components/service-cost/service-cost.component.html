@@ -1,0 +1,64 @@
+<!-- banner -->
+<div class="innerpage-banner" id="home">
+    <div class="inner-page-layer">
+    </div>
+</div>
+<!-- //banner -->
+
+<!-- Services -->
+<section class="services-inner py-5">
+    <div class="container py-md-3">
+        <h2 class="heading text-center mb-sm-5 mb-4">Bảng giá dịch vụ</h2>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div class="div" *ngFor="let item of Treatment">
+                    <table class="table table-borderless" style="margin-bottom: 0px;">
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="background-color: #007bff;">
+                                    <h3 style="color: #ffffff; font-weight: 600;">{{item.name}}</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <img src="{{item.image}}" alt="">
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 50%;">Loại dịch vụ</th>
+                                <th scope="col" style="width: 25%;">Chi phí</th>
+                                <th scope="col" style="width: 25%;">Ghi chú</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let sv of item.treatment_in_service" style="font-weight: bold;">
+                                <th>{{sv.name}}</th>
+                                <td>{{sv.cost}}</td>
+                                <td>1 {{sv.unit}}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div [innerHTML]="item.detail"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+            </div>
+            <div class="col-1"></div>
+        </div> -->
+    </div>
+</section>

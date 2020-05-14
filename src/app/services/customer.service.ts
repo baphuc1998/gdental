@@ -7,16 +7,23 @@ import { Time } from '@angular/common';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
-    // 'Authorization': 'Bearer ' + environment.token
   })
 };
 
+const corsHeaders = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'Access-Control-Allow-Origin': 'http://localhost:5005/'
+  })
+};
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
 
   public API = environment.urlApi;
+  public apiBOT = "https://gbotver6.herokuapp.com/webhooks/rest/webhook";
   public load = true;
 
   constructor(public http: HttpClient) { }
@@ -45,5 +52,24 @@ export class CustomerService {
   getFreeTimeList(date):Observable<any[]>{
     return this.http.get<any[]>(`${this.API}/api/schedule/freetime/?date=${date}`, httpOptions);
   }
+
+  getAllService():Observable<any[]>{
+    return this.http.get<any[]>(`${this.API}/api/public/treatment/`, httpOptions);
+  }
+
+  getIntroTreatment():Observable<any[]>{
+    return this.http.get<any[]>(`${this.API}/api/intro/treatment/`, httpOptions);
+  }
+
+  sendMessage(message):Observable<any[]>{
+    const random = Math.floor(Math.random() * 1001);
+    const json = JSON.stringify({
+      sender : "cus"+random,
+      message : message,
+    });
+    return this.http.post<any[]>(`${this.apiBOT}`, json,corsHeaders);
+  }
+
+
 
 }
