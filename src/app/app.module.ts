@@ -25,6 +25,7 @@ import { ChatboxComponent } from './components/chatbox/chatbox.component';
 import { ServiceCostComponent } from './components/service-cost/service-cost.component';
 import { BaseSiteComponent } from './components/base-site/base-site.component';
 import { FormatLongstringPipe } from './services/pipe/format-longstring.pipe';
+import { PubNubAngular } from 'pubnub-angular2';
   
 
 @NgModule({
@@ -55,7 +56,7 @@ import { FormatLongstringPipe } from './services/pipe/format-longstring.pipe';
     RouterModule.forRoot(routes),
     ChatModule,
   ],
-  providers: [],
+  providers: [PubNubAngular],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
